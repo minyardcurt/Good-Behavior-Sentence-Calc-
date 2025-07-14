@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Good Behavior Sentence Reduction Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Good Behavior Sentence Reduction Calculator</h1>
+
+    <label for="today"><strong>Todays Date:</strong></label>
+    <input type="date" id="today">
+
+    <label for="release"><strong>Current Release Date:</strong></label>
+    <input type="date" id="release">
+
+    <label for="goodBehaviorDays"><strong>Good Behavior Days per Month (Reduction):</strong></label>
+    <input type="number" id="goodBehaviorDays" value="16" min="1">
+
+    <button id="calculateBtn">Calculate</button>
+    <button id="resetBtn">Reset</button>
+
+    <button id="legalInfoBtn">Free Law Library "click here"</button> 
+
+    <div id="result"></div>
+
+    <div id="legalResult"></div>
+
+    <footer>
+      <p>* <strong>* This Time Calculation based on every 30 days you get time reduced for good behavior ** </strong></p>
+    </footer>
+  </div>
+  <script src="apiKey.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
+
