@@ -11,7 +11,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: lightblue;
+  background-image: Url('fence.jpg');
+  background-size: cover;
 }
 
 .container {
@@ -19,7 +20,6 @@ body {
   padding: 20px;
   border-radius: 90px;
   background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo);
-  opacity: 75%;
 }
 
 h1 {
@@ -31,6 +31,7 @@ label, input, button {
   display: block;
   margin-top: 10px;
   width: 100%;
+  margin-left: -9px;
 }
 
 input {
@@ -45,18 +46,20 @@ button {
   margin-top: 20px;
   border-radius: 10px;
   cursor: pointer;
+  margin-left: 0px;
 }
 
 #calculateBtn {
   background-color: #ff0000;
   color: white;
-  margin-left: 10px;
+  margin-left: 0px;
 }
 
 #resetBtn {
   background-color: #1505f5;
   color: white;
-  margin-left: 10px;
+  margin-left: 0px;
+  
 }
 
 #result {

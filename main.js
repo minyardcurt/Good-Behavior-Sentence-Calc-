@@ -1,3 +1,7 @@
+//I have been working on the calculateRealGoodTime function on spare time for since berfore I started your class. 
+  // I revised it many times but this is the first time it has been fully functional and correct.
+// the first proto type only calculated 16 days good time a month, but this version is controled by user input.
+
 document.getElementById('calculateBtn').addEventListener('click', calculateRealGoodTime);
 
 function calculateRealGoodTime() {
