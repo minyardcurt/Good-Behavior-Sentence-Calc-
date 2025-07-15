@@ -1,6 +1,6 @@
 document.getElementById('calculateBtn').addEventListener('click', calculateRealGoodTime);
 document.getElementById('resetBtn').addEventListener('click', resetForm);
-document.ge
+document.getElementById('fetchWeather').addEventListener('click', fetchWeather);
 
 function calculateRealGoodTime() {
   const todayVal = document.getElementById('today').value;
@@ -47,4 +47,19 @@ function resetForm()  {
   document.getElementById('release').value = '';
   document.getElementById('goodBehaviorDays').value = "";
   document.getElementById('result').textContent = '';
+  document.getElementById('fetchWeather').innerHTML = '';
+}
+
+async function fetchWeather() {
+  const city = prompt("Enter a city name:");
+  if (!city) return; 
+
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=imperial`;
+
+  try {
+   const response = await fetch(url);
+    if (!response.ok) throw new Error("City not found");
+
+    const data = 
+ }
 }
