@@ -1,8 +1,6 @@
-//I have been working on the calculateRealGoodTime function on spare time for since berfore I started your class. 
-  // I revised it many times but this is the first time it has been fully functional and correct.
-// the first proto type only calculated 16 days good time a month, but this version is controled by user input.
-
 document.getElementById('calculateBtn').addEventListener('click', calculateRealGoodTime);
+document.getElementById('resetBtn').addEventListener('click', resetForm);
+document.ge
 
 function calculateRealGoodTime() {
   const todayVal = document.getElementById('today').value;
@@ -42,4 +40,11 @@ function calculateRealGoodTime() {
   }
 
   result.textContent = `New Release Date: ${currentDate.toDateString()} (after serving ${monthsServed} month${monthsServed > 1 ? 's' : ''} and earning ${goodBehaviorDays} day${goodBehaviorDays > 1 ? 's' : ''}/month of good behavior credit)`;
+}
+
+function resetForm()  {
+  document.getElementById('today').value = '';
+  document.getElementById('release').value = '';
+  document.getElementById('goodBehaviorDays').value = "";
+  document.getElementById('result').textContent = '';
 }
