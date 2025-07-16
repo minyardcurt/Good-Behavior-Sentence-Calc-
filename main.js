@@ -47,7 +47,7 @@ function resetForm()  {
   document.getElementById('release').value = '';
   document.getElementById('goodBehaviorDays').value = "";
   document.getElementById('result').textContent = '';
-  document.getElementById('fetchWeather').innerHTML = '';
+  document.getElementById('legalResult').innerHTML = '';
 }
 
 async function fetchWeather() {
@@ -60,6 +60,10 @@ const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURICompon
    const response = await fetch(url);
     if (!response.ok) throw new Error("City not found");
 
-    const data = 
+    const data = await response.json();
+      document.getElementById('legalResult').innerHTML = `<h3>Weather in ${data.name}</h3><p>${data.weather[0].description}, ${data.main.temp}°F</p>`;
+ } catch (err) {
+  console.error(err);
+  document.getElementById('legalResult').innerHTML = `<p>Could not fetch weather. Please check the city name.</p>`;
  }
 }
