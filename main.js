@@ -1,6 +1,6 @@
 document.getElementById('calculateBtn').addEventListener('click', calculateRealGoodTime);
 document.getElementById('resetBtn').addEventListener('click', resetForm);
-document.getElementById('fetchWeather').addEventListener('click', fetchWeather);
+document.getElementById('legalResult').addEventListener('click', fetchWeather);
 
 function calculateRealGoodTime() {
   const todayVal = document.getElementById('today').value;
@@ -47,7 +47,6 @@ function resetForm()  {
   document.getElementById('release').value = '';
   document.getElementById('goodBehaviorDays').value = "";
   document.getElementById('result').textContent = '';
-  document.getElementById('legalResult').innerHTML = '';
 }
 
 async function fetchWeather() {
@@ -61,9 +60,9 @@ const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURICompon
     if (!response.ok) throw new Error("City not found");
 
     const data = await response.json();
-      document.getElementById('legalResult').innerHTML = `<h3>Weather in ${data.name}</h3><p>${data.weather[0].description}, ${data.main.temp}°F</p>`;
+      document.getElementById('result').innerHTML = `<h3>Weather in ${data.name}</h3><p>${data.weather[0].description}, ${data.main.temp}°F</p>`;
  } catch (err) {
   console.error(err);
-  document.getElementById('legalResult').innerHTML = `<p>Could not fetch weather. Please check the city name.</p>`;
+  document.getElementById('result').innerHTML = `<p>Could not fetch weather. Please check the city name.</p>`;
  }
 }
