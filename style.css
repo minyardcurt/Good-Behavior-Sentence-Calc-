@@ -18,12 +18,12 @@ body {
 .container {
   max-width: 70%;
   padding: 20px;
-  border-radius: 90px;
+  border-radius: 60px;
   background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo);
+  opacity: 95%;
 }
 
 h1 {
-  text-shadow: 3px 3px white;
   text-align: center;
 }
 
@@ -69,4 +69,8 @@ button {
 
 p {
   text-align: center;
+}
+#banner {
+  background-color: white;
+  border-radius: 10px
 }
