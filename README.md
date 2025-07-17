@@ -1,3 +1,4 @@
+
 Good Behavior Sentence Reduction Calculator
 This is a simple web-based tool designed to help users estimate a revised prison/jail release date based on "good behavior" sentence reductions. It is intended for use by anyone who may benifit from the estimates given.
 
@@ -58,7 +59,7 @@ Button: Resets all the input fields to their default values, allowing the user t
 
 `<button id="legalResult">Check Weather "click here"</button>`
 
-Button: This is an additional feature, fetching weather information it calls a JavaScript function fetchWeather() that retrieves weather data.
+Button: This button is an additional feature, fetching weather information it calls the Java Script function fetchWeather() that retrives weather data.
 
 `<div id="result"></div>`
 
