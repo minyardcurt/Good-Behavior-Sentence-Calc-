@@ -26,45 +26,45 @@ Result Display: Shows the revised release date and how many months of good behav
 
 **** Code Structure ****
 HTML
-<label for="today"> & <input type="date" id="today">
+`<label for="today"> & <input type="date" id="today">`
 
 Label: Prompts the user to input today's date.
 
 Input Field: Allows the user to select the current date from a date picker.
 
-<audio id="bachAudio" src="assets/bach.mp3" preload="auto"></audio>
+`<audio id="bachAudio" src="assets/bach.mp3" preload="auto"></audio>`
 
 Audio Element: Preloads an audio file (Bach.mp3) for playback.
 
-<label for="release"> & <input type="date" id="release">
+`<label for="release"> & <input type="date" id="release">`
 
 Label: Prompts the user to input the current release date.
 
 Input Field: Allows the user to select the release date from a date picker.
 
-<label for="goodBehaviorDays"> & <input type="number" id="goodBehaviorDays" value="16" min="1">
+`<label for="goodBehaviorDays"> & <input type="number" id="goodBehaviorDays" value="16" min="1">`
 
 Label: Prompts the user to input the number of good behavior days per month (used to calculate sentence reduction).
 
 Input Field: A numeric input field where the user can specify the number of good behavior days per month, with a default value of 16.
 
-<button id="calculateBtn">Calculate</button>
+`<button id="calculateBtn">Calculate</button>`
 
 Button: When clicked, it triggers the calculation of the sentence reduction based on the input values. (JavaScript functionality expected to be linked).
 
-<button id="resetBtn">Reset</button>
+`<button id="resetBtn">Reset</button>`
 
 Button: Resets all the input fields to their default values, allowing the user to start a new calculation.
 
-<button id="legalResult">Check Weather "click here"</button>
+`<button id="legalResult">Check Weather "click here"</button>`
 
-Button: This seems to be an additional feature, possibly fetching weather information (as suggested by the text "Check Weather"). The exact functionality isn't clear from the HTML alone, but it likely calls a JavaScript function that retrieves weather data.
+Button: This is an additional feature, fetching weather information it calls a JavaScript function fetchWeather() that retrieves weather data.
 
-<div id="result"></div>
+`<div id="result"></div>`
 
-Result Display: This <div> will be used to display the outcome of the calculation (i.e., the reduced release date or time saved based on good behavior days).
+Result Display: This `<div>` will be used to display the outcome of the calculation (i.e., the reduced release date or time saved based on good behavior days).
 
-<footer>
+`<footer>`
 
 Footer Text: Includes a disclaimer note that explains how the calculation is based on the assumption that every 30 days of good behavior results in a reduction.
 
