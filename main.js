@@ -2,12 +2,28 @@ document.getElementById('calculateBtn').addEventListener('click', calculateRealG
 document.getElementById('resetBtn').addEventListener('click', resetForm);
 document.getElementById('legalResult').addEventListener('click', fetchWeather);
 
+  const bachAudio = document.getElementById('bachAudio');
+  const todayInput = document.getElementById('today');
+  bachAudio.loop = true;
+  bachAudio.volume = 0.4;
+
+  let musicStarted = false;
+
+  todayInput.addEventListener('focus', () => {
+    if (!musicStarted) {
+      bachAudio.play().then(() => {
+        musicStarted = true;
+      }).catch(err => {
+        console.log('Autoplay blocked or failed:', err)
+      })
+    }
+  });
+
 function calculateRealGoodTime() {
   const todayVal = document.getElementById('today').value;
   const releaseVal = document.getElementById('release').value;
   const goodBehaviorDaysVal = document.getElementById('goodBehaviorDays').value;
   const result = document.getElementById('result');
-  
   
   const goodBehaviorDays = parseInt(goodBehaviorDaysVal, 10);
   if (isNaN(goodBehaviorDays) || goodBehaviorDays <= 0) {
