@@ -58,7 +58,7 @@ Button: Resets all the input fields to their default values, allowing the user t
 
 <button id="legalResult">Check Weather "click here"</button>
 
-Button: This seems to be an additional feature, possibly fetching weather information (as suggested by the text "Check Weather"). The exact functionality isn't clear from the HTML alone, but it likely calls a JavaScript function that retrieves weather data.
+Button: This button is an additional feature, fetching weather information it calls the Java Script function fetchWeather() that retrives weather data.
 
 <div id="result"></div>
 
