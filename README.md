@@ -1,3 +1,4 @@
+
 Good Behavior Sentence Reduction Calculator
 This is a simple web-based tool designed to help users estimate a revised prison/jail release date based on "good behavior" sentence reductions. It is intended for use by anyone who may benifit from the estimates given.
 
