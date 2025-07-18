@@ -1,6 +1,6 @@
 document.getElementById('calculateBtn').addEventListener('click', calculateRealGoodTime);
 document.getElementById('resetBtn').addEventListener('click', resetForm);
-document.getElementById('legalResult').addEventListener('click', fetchWeather);
+document.getElementById('weatherResult').addEventListener('click', fetchWeather);
 
   const bachAudio = document.getElementById('bachAudio');
   const todayInput = document.getElementById('today');
